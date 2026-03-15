@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CORES PRINCIPAIS */
+
+:root {
+    --azul-principal: #0d6efd;
+    --azul-claro: #e7f1ff;
+    --azul-escuro: #0b3d91;
+}
+
+/* BODY */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #f8fbff, #eef5ff);
+    color: #333;
+    line-height: 1.6;
+    transition: 0.4s;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #0d6efd, #3a8bfd);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* MENU */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Efeito hover suave */
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* BOTÃO TEMA */
+
+#temaBtn {
+    background: white;
+    color: #0d6efd;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#temaBtn:hover {
+    transform: scale(1.05);
+}
+
+/* SEÇÕES */
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+/* Animação ao passar mouse */
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* TÍTULOS */
+
+h2 {
+    color: var(--azul-principal);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--azul-claro);
+    padding-bottom: 5px;
+}
+
+/* LISTAS */
+
+ul {
+    padding-left: 20px;
+}
+
+/* LINKS PORTFÓLIO */
+
+#portfolio a {
+    color: var(--azul-principal);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#portfolio a:hover {
+    text-decoration: underline;
+}
+
+/* FORMULÁRIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--azul-principal);
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+}
+
+/* BOTÃO */
+
+button {
+    padding: 12px;
+    background: var(--azul-principal);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--azul-escuro);
+    transform: scale(1.03);
+}
+
+/* TEMA ESCURO */
+
+.dark {
+    background: linear-gradient(180deg, #0f172a, #020617);
+    color: #ddd;
+}
+
+.dark section {
+    background: #0f172a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark header {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+}
+
+.dark h2 {
+    color: #60a5fa;
+    border-color: #1e40af;
+
+}
+
+.dark a {
+    color: #60a5fa;
+}
